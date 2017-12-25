@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<h2> Unemployment Data of USA</h2>
+<h2> United States Unemployment from 1975 to 2016</h2>
 <style>
  
 body { font: 15px sans-serif;}
@@ -96,16 +96,16 @@ var colorA=d3.scale.ordinal().range(["Grey",  "Grey",  "green", "orange", "viole
 //var colorB=d3.scale.ordinal().range(["Red",  "green", "orange", "violet", "cyan", "indigo", "black", "grey", "Brown", "Cerulean Blue", "Chestnut", "Crimson", "#8897CE", "#8F90CD", "#9788CD", "#9E81CC", "#AA81C5", "#B681BE", "#C280B7", "#CE80B0", "#D3779F", "#D76D8F", "#DC647E", "#E05A6D", "#E16167", "#E26962", "#E2705C", "#E37756", "#E38457", "#E39158", "#E29D58", "#E2AA59", "#E0B15B", "#DFB95C", "#DDC05E", "#DBC75F", "#E3CF6D", "#EAD67C", "#F2DE8A","#C0C0C0","#808080","#FF0000","#800000","#FFFF00","#808000","#00FF00","#008000","#008080","#00FFFF","#0000FF","#000080","#FF00FF","#800080","#6495ED","#008B8B","#7FB1CF", "#80A8CE", "#809ECE", "#8897CE", "#8F90CD", "#9788CD", "#9E81CC", "#AA81C5", "#B681BE", "#C280B7", "#CE80B0", "#D3779F", "#D76D8F", "#DC647E", "#E05A6D", "#E16167", "#E26962", "#E2705C", "#E37756", "#E38457", "#E39158", "#E29D58", "#E2AA59", "#E0B15B", "#DFB95C", "#DDC05E", "#DBC75F", "#E3CF6D", "#EAD67C", "#F2DE8A","#C0C0C0","#808080","#FF0000","#800000","#FFFF00","#808000","#00FF00","#008000","#008080","#00FFFF","#0000FF","#000080","#FF00FF","#800080","#6495ED","#008B8B"]);     
 var state_catalog=[];
 state_catalog = ["Texas"]
-function reDraw()
+function DrawAgain()
 {
 	document.getElementById("chart").innerHTML="";
 	//svg.selectAll("*").remove();
-	draw_graph();
+	draw_chart();
 }
 function drop_function(){
 }
-draw_graph();
-function draw_graph()
+draw_chart();
+function draw_chart()
 {
 var margin = {top: 10, right: 10, bottom: 100, left: 40},
     margin2 = {top: 420, right: 10, bottom: 20, left: 40},
@@ -433,9 +433,9 @@ function draw_map()
 						console.log(state_catalog);
 						//document.getElementById("chart").innerHTML="";						
 						
-						//draw_graph();
+						//draw_chart();
 						//document.getElementById("clear").disabled=false;		
-						reDraw();								
+						DrawAgain();								
 					})
 					//function for tooltip text
 					.on("mousemove", function(d) {
@@ -531,6 +531,6 @@ return 0.1;
 function verifytrigger(element) {
 if(element.checked)
 	state_catalog.push("National");
-	reDraw();
+	DrawAgain();
 }
 </script>
